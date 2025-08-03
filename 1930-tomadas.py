@@ -1,10 +1,11 @@
-t1,t2,t3,t4 = input().split()
+tomadas_list = []
+soma = 0
 
-t1 = int(t1)-1
-t2 = int(t2)-1
-t3 = int(t3)-1
-t4 = int(t4)
+for i in range(4): # qtd de réguas
+    tomadas_list.append(int(input())) # qtd de tomadas por regua
 
-tomadas = t1 + t2 + t3 + t4
+for i in tomadas_list:
+    soma += i
 
-print(tomadas)
+total = soma - 3 # A última régua não perde uma tomada para cascateamento
+print(total) # Tomadas disponiveis para uso
